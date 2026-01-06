@@ -1,0 +1,193 @@
+/* ---------------- TEXT ANIMATIONS ---------------- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-up {
+  animation: fadeUp 0.9s ease-out forwards;
+}
+
+.animate-delay-1 { animation-delay: 0.2s; }
+.animate-delay-2 { animation-delay: 0.4s; }
+.animate-delay-3 { animation-delay: 0.6s; }
+
+/* ---------------- FLOAT ---------------- */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+  100% { transform: translateY(0); }
+}
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* ---------------- BACKGROUND ZOOM ---------------- */
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.06); }
+}
+.animate-bg-zoom {
+  animation: slowZoom 25s linear infinite alternate;
+}
+
+/* ---------------- GLOW PULSE ---------------- */
+@keyframes glowPulse {
+  0%,100% { text-shadow: 0 0 12px rgba(255,165,0,.6); }
+  50% { text-shadow: 0 0 24px rgba(255,165,0,1); }
+}
+.animate-glow {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* ---------------- BUTTON SHINE ---------------- */
+@keyframes shine {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.btn-shine {
+  background-image: linear-gradient(
+    120deg,
+    rgba(255,255,255,0) 40%,
+    rgba(255,255,255,.35) 50%,
+    rgba(255,255,255,0) 60%
+  );
+  background-size: 200% 100%;
+}
+.group:hover .btn-shine {
+  animation: shine 1.2s ease;
+}
+
+/* ---------------- PARTICLES ---------------- */
+@keyframes particle {
+  from { transform: translateY(0); opacity: .6; }
+  to { transform: translateY(-120px); opacity: 0; }
+}
+.particle {
+  animation: particle 6s linear infinite;
+}
+
+/* ================= SERVICES: FADE UP ================= */
+@keyframes svcFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.svc-animate-fade-up {
+  animation: svcFadeUp 0.9s ease-out forwards;
+}
+
+.svc-delay-1 { animation-delay: 0.2s; }
+.svc-delay-2 { animation-delay: 0.4s; }
+.svc-delay-3 { animation-delay: 0.6s; }
+
+/* ================= SERVICES: SPIN DASH CIRCLE ================= */
+@keyframes svcSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.svc-spin {
+  animation: svcSpin 18s linear infinite;
+}
+
+/* ================= SERVICES: DOT PULSE ================= */
+@keyframes svcDotPulse {
+  0%,100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.7); opacity: .4; }
+}
+.svc-dot {
+  animation: svcDotPulse 2.4s ease-in-out infinite;
+}
+
+/* ================= SERVICES: FLOATING DECOR DOT ================= */
+@keyframes svcFloatDot {
+  from { transform: translateY(0); opacity: .6; }
+  to { transform: translateY(-80px); opacity: 0; }
+}
+.svc-float-dot {
+  animation: svcFloatDot 7s linear infinite;
+}
+
+
+
+.cursor-dot-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 30% 30%, #fff 0, #fed7aa 40%, #f97316 100%);
+  box-shadow:
+    0 0 10px rgba(249, 115, 22, 0.8),
+    0 0 30px rgba(249, 115, 22, 0.6);
+  animation: cursorPulse 1.4s ease-in-out infinite;
+}
+
+@keyframes cursorPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.8);
+    opacity: 0.45;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+/* Slide animations */
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-80px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+.animate-slide-left {
+  animation: slideLeft 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(80px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+.animate-slide-right {
+  animation: slideRight 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Feature pill hover fixes */
+.feature-pill {
+  position: relative;
+  overflow: hidden;
+}

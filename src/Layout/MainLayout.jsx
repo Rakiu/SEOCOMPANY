@@ -1,9 +1,9 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 import Footer from "../Component/Common/Footer";
 import Navbar from "../Component/Common/Navbar";
 
-
-const MainLayout = ({ children }) => {
+const MainLayout = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white dark:bg-[#0f0f0f] transition-colors duration-300">
       
@@ -12,7 +12,7 @@ const MainLayout = ({ children }) => {
 
       {/* MAIN CONTENT */}
       <main className="flex-1">
-        {children}
+        <Outlet />
       </main>
 
       {/* FOOTER */}
